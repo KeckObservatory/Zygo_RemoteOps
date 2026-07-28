@@ -1,0 +1,35 @@
+/* Google protocol buffer field definitions located at:
+   https://developers.google.com/protocol-buffers/docs/proto3
+
+   Generate protobuf and gRPC Python files together:
+    # pip install grpcio grpcio-tools
+    # /usr/local/anaconda/bin/python3 -m grpc_tools.protoc  --python_out=. --pyi_out=. --grpc_python_out=. -I=. dmat.proto
+*/
+
+syntax = "proto3";
+
+package dmat;
+
+/* -------------------------------------------------------------------------- */
+service Zygo {
+  rpc Expose (ExposeRequest) returns (ExposeReply) {}
+  rpc Retrieve (RetrieveRequest) returns (RetrieveReply) {}
+}
+
+message ExposeRequest {
+
+}
+
+message ExposeReply {
+  bool success = 1;
+
+}
+
+message RetrieveRequest {
+
+}
+
+message RetrieveReply {
+  bool exists = 1;
+  bytes filedata = 2;
+}
