@@ -3,3 +3,14 @@ __pycache__/
 *.datx
 .idea/
 .DS_Store
+
+# LaTeX build artifacts (Overleaf sync)
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
