@@ -12,8 +12,7 @@ channel_options = [
 ]
 
 #host ='vm-aodev'
-# host = 'zygo-pc.keck.hawaii.edu'
-host = '127.0.0.1'
+host = 'zygo-pc.keck.hawaii.edu'
 port = '50051'
 
 channel = grpc.insecure_channel(f'{host}:{port}', options=channel_options)
