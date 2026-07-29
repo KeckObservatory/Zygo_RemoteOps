@@ -22,7 +22,7 @@ host = 'zygo-pc.keck.hawaii.edu'
 port = '50051'
 
 
-ZYGO_DIR  = "/home/mvincent/PycharmProjects/DMAcceptanceTest"
+ZYGO_DIR  = os.path.expanduser("~/zygo_data")
 ZYGO_NAME = "current_measurement.datx"
 ZYGO_PATH = os.path.join(ZYGO_DIR, ZYGO_NAME)
 

@@ -15,4 +15,6 @@ Split out from `DMAcceptanceTest`.
 
 ## Notes
 
-`zygo_client.py` currently hardcodes a host (`zygo-pc.keck.hawaii.edu`) and local save path (`ZYGO_DIR`) — update these for your environment.
+`zygo_client.py` currently hardcodes a host (`zygo-pc.keck.hawaii.edu`) — update this for your environment.
+
+`ZYGO_DIR` defaults to `~/zygo_data`, created on first exposure. This is scratch space, not storage: it holds a single `current_measurement.datx` that gets overwritten by every `expose()` call. Don't point it at a self-cleaning temp directory — `expose()`'s test-mode fallback (used when the RPC call fails) reads whatever `current_measurement.datx` was left over from the last successful exposure, so the file needs to persist between runs.
